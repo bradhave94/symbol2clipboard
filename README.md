@@ -24,6 +24,5 @@ Looking for symbols? Find them here. Donger
 ## [2.0] - 2016-12-06
 ### Added
 - Added ASCII Table
-- Removed Font Awesome Tab
 - Improved UI
 - More Donger
