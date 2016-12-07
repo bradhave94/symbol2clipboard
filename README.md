@@ -1,4 +1,4 @@
-# symbol2clipboard
+# Symbol 2 Clipboard
 This extension will copy the clicked symbol to your clipboard.
 
 Looking for symbols? Find them here. Donger
