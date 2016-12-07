@@ -4,6 +4,7 @@ This extension will copy the clicked symbol to your clipboard.
 Looking for symbols? Find them here. Donger
 
 # Features 
+-------------
 - Lists of common symbols
 - Values for common symbols
 - Full ASCII Table
