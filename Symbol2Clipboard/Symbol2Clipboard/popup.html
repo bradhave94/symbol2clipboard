@@ -1,0 +1,802 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Symbol 2 Clipboard</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="popup.js"></script>
+</head>
+
+<body style="display: block;">
+    <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+            <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tab-symbols" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tab-symbols" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Symbols</a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-values" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tab-values" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Values</a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-fa" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tab-ascii" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">ASCII</a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-fa" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tab-donger" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Donger</a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-fa" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tab-fav" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">★</a></li>
+        </ul>
+        <div id="tab-symbols" style="text-align:center;" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false"> <span class="symbol">©</span> <span class="symbol">®</span> <span class="symbol">™</span> <span class="symbol">«</span> <span class="symbol">»</span> <span class="symbol">€</span> <span class="symbol">¢</span> <span class="symbol">¥</span> <span class="symbol">¿</span> <span class="symbol">¡</span> <span class="symbol">§</span> <span class="symbol">¶</span> <span class="symbol">►</span> <span class="symbol">◄</span> <span class="symbol">▲</span> <span class="symbol">▼</span> <span class="symbol">■</span> <span class="symbol">→</span> <span class="symbol">←</span> <span class="symbol">↑</span> <span class="symbol">↓</span> <span class="symbol">↨</span> <span class="symbol">♂</span> <span class="symbol">♀</span><span class="symbol">⚧</span> <span class="symbol">✎</span> <span class="symbol">✏</span> <span class="symbol">♩</span> <span class="symbol">♪</span> <span class="symbol">♫</span> <span class="symbol">♬</span> <span class="symbol">♠</span> <span class="symbol">♣</span> <span class="symbol">♦</span> <span class="symbol">♥</span> <span class="symbol">♺</span> <span class="symbol">✓</span> <span class="symbol">¼</span> <span class="symbol">½</span> <span class="symbol">¾</span> <span class="symbol">×</span> <span class="symbol">÷</span> <span class="symbol">±</span> <span class="symbol">–</span><span class="symbol">π</span><span class="symbol">⁺</span> <span class="symbol">°</span> <span class="symbol">¹</span> <span class="symbol">²</span> <span class="symbol">³</span> <span class="symbol">⁴</span> <span class="symbol">⁵</span> <span class="symbol">⁶</span> <span class="symbol">⁷</span> <span class="symbol">⁸</span> <span class="symbol">⁹</span> <span class="symbol">⁰</span><span class="symbol">★</span> </div>
+        <div id="tab-values" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="colgroup">Char</th>
+                        <th scope="colgroup">Numeric</th>
+                        <th scope="colgroup">Symbolic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="symbol char">´</span></td>
+                        <td><span class="symbol">&amp;#180;</span></td>
+                        <td><span class="symbol">&amp;acute;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">&amp;</span></td>
+                        <td><span class="symbol">&amp;#38;</span></td>
+                        <td><span class="symbol">&amp;amp;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¦</span></td>
+                        <td><span class="symbol">&amp;#166;</span></td>
+                        <td><span class="symbol">&amp;brvbar;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">•</span></td>
+                        <td><span class="symbol">&amp;#8226;</span></td>
+                        <td><span class="symbol">&amp;bull;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¸</span></td>
+                        <td><span class="symbol">&amp;#184;</span></td>
+                        <td><span class="symbol">&amp;cedil;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¢</span></td>
+                        <td><span class="symbol">&amp;#162;</span></td>
+                        <td><span class="symbol">&amp;cent;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">©</span></td>
+                        <td><span class="symbol">&amp;#169;</span></td>
+                        <td><span class="symbol">&amp;copy;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">°</span></td>
+                        <td><span class="symbol">&amp;#176;</span></td>
+                        <td><span class="symbol">&amp;deg;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">÷</span></td>
+                        <td><span class="symbol">&amp;#247;</span></td>
+                        <td><span class="symbol">&amp;divide;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">½</span></td>
+                        <td><span class="symbol">&amp;#189;</span></td>
+                        <td><span class="symbol">&amp;frac12;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¼</span></td>
+                        <td><span class="symbol">&amp;#188;</span></td>
+                        <td><span class="symbol">&amp;frac14;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¾</span></td>
+                        <td><span class="symbol">&amp;#190;</span></td>
+                        <td><span class="symbol">&amp;frac34;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">></span></td>
+                        <td><span class="symbol">&amp;#62;</span></td>
+                        <td><span class="symbol">&amp;gt;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">&lt;</span></td>
+                        <td><span class="symbol">&amp;#60;</span></td>
+                        <td><span class="symbol">&amp;lt;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¡</span></td>
+                        <td><span class="symbol">&amp;#161;</span></td>
+                        <td><span class="symbol">&amp;iexcl;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¿</span></td>
+                        <td><span class="symbol">&amp;#191;</span></td>
+                        <td><span class="symbol">&amp;iquest;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">«</span></td>
+                        <td><span class="symbol">&amp;#171;</span></td>
+                        <td><span class="symbol">&amp;laquo;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¯</span></td>
+                        <td><span class="symbol">&amp;#175;</span></td>
+                        <td><span class="symbol">&amp;macr;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">µ</span></td>
+                        <td><span class="symbol">&amp;#181;</span></td>
+                        <td><span class="symbol">&amp;micro;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">&nbsp;</span></td>
+                        <td><span class="symbol">&amp;#160;</span></td>
+                        <td><span class="symbol">&amp;nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¬</span></td>
+                        <td><span class="symbol">&amp;#172;</span></td>
+                        <td><span class="symbol">&amp;not;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¶</span></td>
+                        <td><span class="symbol">&amp;#182;</span></td>
+                        <td><span class="symbol">&amp;para;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">π</span></td>
+                        <td><span class="symbol">&amp;#960;</span></td>
+                        <td><span class="symbol">&amp;pi;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">±</span></td>
+                        <td><span class="symbol">&amp;#177;</span></td>
+                        <td><span class="symbol">&amp;plusmn;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">×</span></td>
+                        <td><span class="symbol">&amp;#215;</span></td>
+                        <td><span class="symbol">&amp;times;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">®</span></td>
+                        <td><span class="symbol">&amp;#174;</span></td>
+                        <td><span class="symbol">&amp;reg;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">»</span></td>
+                        <td><span class="symbol">&amp;#187;</span></td>
+                        <td><span class="symbol">&amp;raquo;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">§</span></td>
+                        <td><span class="symbol">&amp;#167;</span></td>
+                        <td><span class="symbol">&amp;sect;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¨</span></td>
+                        <td><span class="symbol">&amp;#168;</span></td>
+                        <td><span class="symbol">&amp;uml;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">×</span></td>
+                        <td><span class="symbol">&amp;#215;</span></td>
+                        <td><span class="symbol">&amp;times;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">™</span></td>
+                        <td><span class="symbol">&amp;#8482;</span></td>
+                        <td><span class="symbol">&amp;trade;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">€</span></td>
+                        <td><span class="symbol">&amp;#8364;</span></td>
+                        <td><span class="symbol">&amp;euro;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">£</span></td>
+                        <td><span class="symbol">&amp;#163;</span></td>
+                        <td><span class="symbol">&amp;pound;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">¥</span></td>
+                        <td><span class="symbol">&amp;#165;</span></td>
+                        <td><span class="symbol">&amp;yen;</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-donger" style="text-align:center;" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: none;"> <span class="symbol">⊂(▀¯▀⊂)</span> <span class="symbol">ᕙ(˵ ಠ ਊ ಠ ˵)ᕗ</span><span class="symbol">∩༼˵☯‿☯˵༽つ¤=[]:::::></span> <span class="symbol">ლ(~•̀︿•́~)つ︻̷┻̿═━一</span> <span class="symbol">( ͡↑ ͜ʖ ͡↑)</span> <span class="symbol">ᕙ༼=ݓ益ݓ=༽ᕗ</span> <span class="symbol">ᕙ(░ಥ╭͜ʖ╮ಥ░)━☆ﾟ.*･｡ﾟ</span> <span class="symbol">┌༼◉ل͟◉༽┐</span> <span class="symbol">╰། ◉ ◯ ◉ །╯</span> <span class="symbol">ԅ( ͒ ۝ ͒ )ᕤ</span> <span class="symbol">╰( ⁰ ਊ ⁰ )━☆ﾟ.*･｡ﾟ</span> <span class="symbol">ᕕ( ՞ ᗜ ՞ )ᕗ</span> <span class="symbol">ᕙ[･۝･]ᕗ</span> <span class="symbol">ᕙ〳 ರ ︿ ರೃ 〵ᕗ</span> <span class="symbol">o͡͡͡╮༼ • ʖ̯ • ༽╭o͡͡͡</span> <span class="symbol">(◕⌂◕⊃⊃)</span> <span class="symbol">໒( , ⊙ – ⊙ , )७</span> <span class="symbol">☆*:. o(≧▽≦)o .:*☆</span> <span class="symbol">(ノ͡° ͜ʖ ͡°)ノ︵┻┻</span> <span class="symbol">┻┻︵⁞=༎ຶ﹏༎ຶ=⁞︵┻┻</span> <span class="symbol">ʕ ᓀ ᴥ ᓂ ʔ</span> <span class="symbol">ᕙᓄ(☉ਊ☉)ᓄᕗ</span> <span class="symbol">ᕦ⁞ ✿ ᵒ̌ ᴥ ᵒ̌ ✿ ⁞ᕤ</span> <span class="symbol">ᕙʕ ಥ ▃ ಥ ʔᕗ</span> <span class="symbol">٩ʕ◕౪◕ʔو</span> <span class="symbol">(V●ᴥ●V)</span> <span class="symbol">║ ಡ ͜ ʖ ಡ ║</span> <span class="symbol">ᕦ( ̿ ﹏ ̿ )ᕤ</span> <span class="symbol">╚═། ◑ ▃ ◑ །═╝</span> <span class="symbol">┌༼ – _ – ༽┐</span> <span class="symbol">ᕦ༼ ✖ ਊ ✖ ༽ᕤ</span> <span class="symbol">ԅ། ຈ ◞౪◟ຈ །و</span> <span class="symbol">¯_| ಠ ∧ ಠ |_/¯</span> <span class="symbol">╏ ” ⊚ ͟ʖ ⊚ ” ╏</span> <span class="symbol">୧[ * ಡ ▽ ಡ * ]୨</span> <span class="symbol">ᕙ[  ͒ ﹏ ͒  ]ᕗ</span> <span class="symbol">⋋| ◉ ͟ʖ ◉ |⋌</span> <span class="symbol">( ರ Ĺ̯ ರೃ )</span> <span class="symbol">(⁰ ◕〜◕ ⁰)</span> <span class="symbol">(∩╹□╹∩)</span> <span class="symbol">ᕙ╏✖۝✖╏⊃-(===></span> <span class="symbol">╰[ ⁰﹏⁰ ]╯</span> <span class="symbol">ლ(ಥ Д ಥ )ლ</span> <span class="symbol">⋌༼ •̀ ⌂ •́ ༽⋋</span> <span class="symbol">s( ^ ‿ ^)-b</span> <span class="symbol">└༼ ಥ ᗜ ಥ ༽┘</span> <span class="symbol">୧( ಠ Д ಠ )୨</span> <span class="symbol">┌( ◕ 益 ◕ )ᓄ</span> <span class="symbol">@( ◕ x ◕ )@</span> <span class="symbol">ᕙ( ~ . ~ )ᕗ</span> <span class="symbol">┌( •́ ਊ •̀ )┐</span> <span class="symbol">ヽ〳 ՞ ᗜ ՞ 〵ง</span> <span class="symbol">໒( ͡ᵔ ▾ ͡ᵔ )७</span> <span class="symbol">┌[ ◔ ͜ ʖ ◔ ]┐</span> <span class="symbol">ᕦ╏ ʘ̆ ‸ ʘ̆ ╏ᕤ</span> <span class="symbol">໒( • ͜ʖ • )७</span> <span class="symbol">ᕦ| ๑ ʖ ๑ |ᕤ</span> <span class="symbol">〳 ◔ Ĺ̯ ◔ 〵</span> <span class="symbol">〳 •́ ﹏ •̀ 〵</span> <span class="symbol">¯_╏ ՞ ︿ ՞ ╏_/¯</span> <span class="symbol">╚═| ~ ಠ ₒ ಠ ~ |═╝</span> <span class="symbol">乁| ･ 〰 ･ |ㄏ</span> <span class="symbol">┬┴┬┴┤ᕦ( ▀̿ Ĺ̯ ▀̿├┬┴┬</span> <span class="symbol">o͡͡͡╮༼ ʘ̆ ۝ ʘ̆ ༽╭o͡͡͡</span> <span class="symbol">ԅ། – ‸ – །ᕗ</span> <span class="symbol">୧( ಠ┏ل͜┓ಠ )୨</span> <span class="symbol">┌། ☯ _ʖ ☯ །┐</span> <span class="symbol">ᕦ༼◣_◢༽つ</span> <span class="symbol">ᕙ(◉෴◉)ᕗ</span> <span class="symbol">ლ( ◕ 益 ◕ ) ლ</span> <span class="symbol">(╭ರ_⊙)</span> <span class="symbol">(╭ರᴥ•́)</span> <span class="symbol">c( ⁰ 〰 ⁰ )੭</span> <span class="symbol">ᕙʕಠᴥಠʔᕗ</span> <span class="symbol">ᕙ(˵ි۝ි˵)ᕗ</span> <span class="symbol">/┌(˵༎ຶ  ل͟  ༎ຶ˵)┐</span> <span class="symbol">ლ ( ◕  ᗜ  ◕ ) ლ</span> <span class="symbol">ʕ ・ Д ・ ʔ</span> <span class="symbol">(   ͡°╭╮ʖ   ͡°)</span> <span class="symbol">╰໒( ි ▾ ි )७╯</span> <span class="symbol">╚═[ ˵✖‿✖˵ ]═╝</span> <span class="symbol">ԅ(☉Д☉)╮</span> <span class="symbol">╰(ಥдಥ)ノ</span> <span class="symbol">ᕕ( ཀ ʖ̯ ཀ)ᕗ</span> <span class="symbol">(つ•̀ᴥ•́)つ*:･ﾟ✧</span> <span class="symbol">ʕ⊙ᴥ⊙ʔ</span> <span class="symbol">(⊙ᗜ⊙)</span> <span class="symbol">(⊃･ᴥ･)つ</span> <span class="symbol">༼つ ◕_◕ ༽つ</span> <span class="symbol">ᕙ⁞ = 〰 = ⁞ᕗ</span> <span class="symbol">╰༼ ⋋ ‸ ⋌ ༽╯</span> <span class="symbol">･｡ﾟ[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]｡ﾟ.*</span> <span class="symbol">¯_༽ ಥ Д ಥ ༼_/¯</span> <span class="symbol">╰(◕ᗜ◕)╯</span> <span class="symbol">░ ∗ ◕ ں ◕ ∗ ░</span> <span class="symbol">✿*∗˵╰༼✪ᗜ✪༽╯˵∗*✿</span> <span class="symbol">( ✖ _ ✖ )</span> <span class="symbol">┌། ≖ Ĺ̯ ≖ །┐</span> <span class="symbol">╰[✿•̀o•́✿]╯</span> <span class="symbol">ᕕ(◉Д◉ )ᕗ</span> <span class="symbol">⋌[∗✖ ω ✖∗]⋋</span> <span class="symbol">ᕕ(⌐■_■)ᕗ ♪♬</span> <span class="symbol">( ຈ ﹏ ຈ )</span> <span class="symbol">〳 ◉ ͜ʖ ◉ 〵</span> <span class="symbol">/╲/╭༼ಥДಥ༽╮/╱</span> <span class="symbol">╰༼ •̀۝•́ ༽╯</span> <span class="symbol">(ᕗ ͠°  ਊ ͠° )ᕗ</span> <span class="symbol">༼( ͡⊙  ਊ  ͡⊙)༽</span> <span class="symbol">ᕙ༼ಠ͜ʖಠ༽ノ</span> <span class="symbol">┌( ◐ o ◐ )┐</span> <span class="symbol">╚═░ ・ ﹏ ・ ░═╝</span> <span class="symbol">╏ •́ – •̀ ╏</span> <span class="symbol">໒( ∗ ⊘ ﹏ ⊘ ∗ )७</span> <span class="symbol">ԅ༼ . º ʖ̯ º . ༽ง</span> <span class="symbol">乁ʕ •̀ ۝ •́ ʔㄏ</span> <span class="symbol">(∩◕(oo)◕∩ )</span> <span class="symbol">┏(-_-)┓┏(-_-)┛┗(-_-)┓</span> <span class="symbol">ლ༼ ▀̿ Ĺ̯ ▀̿ ლ༽</span> <span class="symbol">━╤デ╦︻(▀̿̿Ĺ̯̿̿▀̿ ̿)</span> <span class="symbol">(つ°ヮ°)つ</span> <span class="symbol">ԅ╏ ᴼ ︿ ᴼ ╏੭</span> <span class="symbol">ʕ – (oo) – ʔ</span> <span class="symbol">[ ⇀ ‿ ↼ ]</span> <span class="symbol">ᕕ| ~ ⁰ ෴ ⁰ ~ |┐</span> <span class="symbol">| ◯ ‸ ◯ |</span> <span class="symbol">ლ༼ ❛ Ĺ̯ ❛ ༽ᕤ</span> <span class="symbol">ᕙ▐ ° ◯ ° ▐ᕗ</span> <span class="symbol">| ” ☯ ︿ ☯ ” |</span> <span class="symbol">༼つಠ益ಠ༽つ ─=≡ΣO))</span> <span class="symbol">└▐ ◐ ◯ ◐ ▐┘</span> <span class="symbol">ʕ◉ᴥ◉ʔ</span> <span class="symbol">ɖී؀ීϸ</span> <span class="symbol">(◕ᴥ◕)</span> <span class="symbol">ᕦ( ⊙ ∧ ⊙ )ᕤ</span> <span class="symbol">໒( •́ ‸ •̀ )७</span> <span class="symbol">( ◑ ᗜ ◑ )</span> <span class="symbol">┌[ ヘ ‸ ヘ ]┐</span> <span class="symbol">། □ ෴ □ །</span> <span class="symbol">(つ˵•́ω•̀˵)つ━☆ﾟ.*･｡ﾟ҉̛༽̨҉҉ﾉ</span> <span class="symbol">( ´ ∀ ` )</span> <span class="symbol">ɖී؀ීϸ</span> <span class="symbol">╰(⊹◕۝◕ )╯</span> <span class="symbol">༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽</span> <span class="symbol">ヽ༼ຈل͜ຈ༽ﾉ </span> <span class="symbol">█▄༼ຈل͜ຈ༽▄█</span><span class="symbol">(づ ￣ ³￣)づ</span> <span class="symbol">༼ ▀̿Ĺ̯▀̿ ̿ ༽</span> <span class="symbol">(◣_◢)</span> <span class="symbol">☜(ﾟヮﾟ☜)</span> <span class="symbol">ᕦ(ò_ó*)ᕤ</span> <span class="symbol">༼ ಠ_ರೃ༽  [̲̅$̲̅(̲̅5̲̅)̲̅$̲̅]</span> <span class="symbol">(¤﹏¤)</span> <span class="symbol">(∩▂∩)</span> <span class="symbol">✌.ʕʘ‿ʘʔ.✌</span> <span class="symbol">(✪㉨✪)</span> <span class="symbol">•(⌚_⌚)•</span> <span class="symbol">ヽ(ﾟｰﾟ*ヽ)ヽ(*ﾟｰﾟ*)ﾉ(ﾉ*ﾟｰﾟ)ﾉ </span> <span class="symbol">❀◕ ‿ ◕❀ </span> <span class="symbol">｡◕‿◕｡</span> <span class="symbol">◕‿◕</span> <span class="symbol">◙‿◙</span></div>
+        <div id="tab-ascii" style="text-align:center;" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="colgroup">Char</th>
+                        <th scope="colgroup">Dec</th>
+                        <th scope="colgroup">Hex</th>
+                        <th scope="colgroup">Oct</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="symbol char">Space</span></td>
+                        <td><span class="symbol">32</span></td>
+                        <td><span class="symbol">20</span></td>
+                        <td><span class="symbol">040</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">!</span></td>
+                        <td><span class="symbol">33</span></td>
+                        <td><span class="symbol">21</span></td>
+                        <td><span class="symbol">041</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">"</span></td>
+                        <td><span class="symbol">34</span></td>
+                        <td><span class="symbol">22</span></td>
+                        <td><span class="symbol">042</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">#</span></td>
+                        <td><span class="symbol">35</span></td>
+                        <td><span class="symbol">23</span></td>
+                        <td><span class="symbol">043</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">$</span></td>
+                        <td><span class="symbol">36</span></td>
+                        <td><span class="symbol">24</span></td>
+                        <td><span class="symbol">044</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">%</span></td>
+                        <td><span class="symbol">37</span></td>
+                        <td><span class="symbol">25</span></td>
+                        <td><span class="symbol">045</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">&</span></td>
+                        <td><span class="symbol">38</span></td>
+                        <td><span class="symbol">26</span></td>
+                        <td><span class="symbol">046</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">'</span></td>
+                        <td><span class="symbol">39</span></td>
+                        <td><span class="symbol">27</span></td>
+                        <td><span class="symbol">047</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">(</span></td>
+                        <td><span class="symbol">40</span></td>
+                        <td><span class="symbol">28</span></td>
+                        <td><span class="symbol">050</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">)</span></td>
+                        <td><span class="symbol">41</span></td>
+                        <td><span class="symbol">29</span></td>
+                        <td><span class="symbol">051</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">*</span></td>
+                        <td><span class="symbol">42</span></td>
+                        <td><span class="symbol">2A</span></td>
+                        <td><span class="symbol">052</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">+</span></td>
+                        <td><span class="symbol">43</span></td>
+                        <td><span class="symbol">2B</span></td>
+                        <td><span class="symbol">053</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">,</span></td>
+                        <td><span class="symbol">44</span></td>
+                        <td><span class="symbol">2C</span></td>
+                        <td><span class="symbol">054</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">-</span></td>
+                        <td><span class="symbol">45</span></td>
+                        <td><span class="symbol">2D</span></td>
+                        <td><span class="symbol">055</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">.</span></td>
+                        <td><span class="symbol">46</span></td>
+                        <td><span class="symbol">2E</span></td>
+                        <td><span class="symbol">056</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">/</span></td>
+                        <td><span class="symbol">47</span></td>
+                        <td><span class="symbol">2F</span></td>
+                        <td><span class="symbol">057</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">0</span></td>
+                        <td><span class="symbol">48</span></td>
+                        <td><span class="symbol">30</span></td>
+                        <td><span class="symbol">060</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">1</span></td>
+                        <td><span class="symbol">49</span></td>
+                        <td><span class="symbol">31</span></td>
+                        <td><span class="symbol">061</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">2</span></td>
+                        <td><span class="symbol">50</span></td>
+                        <td><span class="symbol">32</span></td>
+                        <td><span class="symbol">062</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">3</span></td>
+                        <td><span class="symbol">51</span></td>
+                        <td><span class="symbol">33</span></td>
+                        <td><span class="symbol">063</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">4</span></td>
+                        <td><span class="symbol">52</span></td>
+                        <td><span class="symbol">34</span></td>
+                        <td><span class="symbol">064</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">5</span></td>
+                        <td><span class="symbol">53</span></td>
+                        <td><span class="symbol">35</span></td>
+                        <td><span class="symbol">065</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">6</span></td>
+                        <td><span class="symbol">54</span></td>
+                        <td><span class="symbol">36</span></td>
+                        <td><span class="symbol">066</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">7</span></td>
+                        <td><span class="symbol">55</span></td>
+                        <td><span class="symbol">37</span></td>
+                        <td><span class="symbol">067</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">8</span></td>
+                        <td><span class="symbol">56</span></td>
+                        <td><span class="symbol">38</span></td>
+                        <td><span class="symbol">070</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">9</span></td>
+                        <td><span class="symbol">57</span></td>
+                        <td><span class="symbol">39</span></td>
+                        <td><span class="symbol">071</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">:</span></td>
+                        <td><span class="symbol">58</span></td>
+                        <td><span class="symbol">3A</span></td>
+                        <td><span class="symbol">072</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">;</span></td>
+                        <td><span class="symbol">59</span></td>
+                        <td><span class="symbol">3B</span></td>
+                        <td><span class="symbol">073</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char"><</span></td>
+                        <td><span class="symbol">60</span></td>
+                        <td><span class="symbol">3C</span></td>
+                        <td><span class="symbol">074</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">=</span></td>
+                        <td><span class="symbol">61</span></td>
+                        <td><span class="symbol">3D</span></td>
+                        <td><span class="symbol">075</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">></span></td>
+                        <td><span class="symbol">62</span></td>
+                        <td><span class="symbol">3E</span></td>
+                        <td><span class="symbol">076</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">?</span></td>
+                        <td><span class="symbol">63</span></td>
+                        <td><span class="symbol">3F</span></td>
+                        <td><span class="symbol">077</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">@</span></td>
+                        <td><span class="symbol">64</span></td>
+                        <td><span class="symbol">40</span></td>
+                        <td><span class="symbol">100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">A</span></td>
+                        <td><span class="symbol">65</span></td>
+                        <td><span class="symbol">41</span></td>
+                        <td><span class="symbol">101</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">B</span></td>
+                        <td><span class="symbol">66</span></td>
+                        <td><span class="symbol">42</span></td>
+                        <td><span class="symbol">102</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">C</span></td>
+                        <td><span class="symbol">67</span></td>
+                        <td><span class="symbol">43</span></td>
+                        <td><span class="symbol">103</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">D</span></td>
+                        <td><span class="symbol">68</span></td>
+                        <td><span class="symbol">44</span></td>
+                        <td><span class="symbol">104</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">E</span></td>
+                        <td><span class="symbol">69</span></td>
+                        <td><span class="symbol">45</span></td>
+                        <td><span class="symbol">105</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">F</span></td>
+                        <td><span class="symbol">70</span></td>
+                        <td><span class="symbol">46</span></td>
+                        <td><span class="symbol">106</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">G</span></td>
+                        <td><span class="symbol">71</span></td>
+                        <td><span class="symbol">47</span></td>
+                        <td><span class="symbol">107</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">H</span></td>
+                        <td><span class="symbol">72</span></td>
+                        <td><span class="symbol">48</span></td>
+                        <td><span class="symbol">110</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">I</span></td>
+                        <td><span class="symbol">73</span></td>
+                        <td><span class="symbol">49</span></td>
+                        <td><span class="symbol">11</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">J</span></td>
+                        <td><span class="symbol">74</span></td>
+                        <td><span class="symbol">4A</span></td>
+                        <td><span class="symbol">112</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">K</span></td>
+                        <td><span class="symbol">75</span></td>
+                        <td><span class="symbol">4B</span></td>
+                        <td><span class="symbol">113</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">L</span></td>
+                        <td><span class="symbol">76</span></td>
+                        <td><span class="symbol">4C</span></td>
+                        <td><span class="symbol">114</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">M</span></td>
+                        <td><span class="symbol">77</span></td>
+                        <td><span class="symbol">4D</span></td>
+                        <td><span class="symbol">115</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">N</span></td>
+                        <td><span class="symbol">78</span></td>
+                        <td><span class="symbol">4E</span></td>
+                        <td><span class="symbol">116</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">O</span></td>
+                        <td><span class="symbol">79</span></td>
+                        <td><span class="symbol">4F</span></td>
+                        <td><span class="symbol">117</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">P</span></td>
+                        <td><span class="symbol">80</span></td>
+                        <td><span class="symbol">50</span></td>
+                        <td><span class="symbol">120</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">Q</span></td>
+                        <td><span class="symbol">81</span></td>
+                        <td><span class="symbol">51</span></td>
+                        <td><span class="symbol">121</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">R</span></td>
+                        <td><span class="symbol">82</span></td>
+                        <td><span class="symbol">52</span></td>
+                        <td><span class="symbol">122</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">S</span></td>
+                        <td><span class="symbol">83</span></td>
+                        <td><span class="symbol">53</span></td>
+                        <td><span class="symbol">123</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">T</span></td>
+                        <td><span class="symbol">84</span></td>
+                        <td><span class="symbol">54</span></td>
+                        <td><span class="symbol">124</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">U</span></td>
+                        <td><span class="symbol">85</span></td>
+                        <td><span class="symbol">55</span></td>
+                        <td><span class="symbol">125</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">V</span></td>
+                        <td><span class="symbol">86</span></td>
+                        <td><span class="symbol">56</span></td>
+                        <td><span class="symbol">126</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">W</span></td>
+                        <td><span class="symbol">87</span></td>
+                        <td><span class="symbol">57</span></td>
+                        <td><span class="symbol">127</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">X</span></td>
+                        <td><span class="symbol">88</span></td>
+                        <td><span class="symbol">58</span></td>
+                        <td><span class="symbol">130</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">Y</span></td>
+                        <td><span class="symbol">89</span></td>
+                        <td><span class="symbol">59</span></td>
+                        <td><span class="symbol">131</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">Z</span></td>
+                        <td><span class="symbol">90</span></td>
+                        <td><span class="symbol">5A</span></td>
+                        <td><span class="symbol">132</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">[</span></td>
+                        <td><span class="symbol">91</span></td>
+                        <td><span class="symbol">5B</span></td>
+                        <td><span class="symbol">133</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">\</span></td>
+                        <td><span class="symbol">92</span></td>
+                        <td><span class="symbol">5C</span></td>
+                        <td><span class="symbol">134</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">]</span></td>
+                        <td><span class="symbol">93</span></td>
+                        <td><span class="symbol">5D</span></td>
+                        <td><span class="symbol">135</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">^</span></td>
+                        <td><span class="symbol">94</span></td>
+                        <td><span class="symbol">5E</span></td>
+                        <td><span class="symbol">136</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">_</span></td>
+                        <td><span class="symbol">95</span></td>
+                        <td><span class="symbol">5F</span></td>
+                        <td><span class="symbol">137</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">`</span></td>
+                        <td><span class="symbol">96</span></td>
+                        <td><span class="symbol">60</span></td>
+                        <td><span class="symbol">140</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">a</span></td>
+                        <td><span class="symbol">97</span></td>
+                        <td><span class="symbol">61</span></td>
+                        <td><span class="symbol">141</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">b</span></td>
+                        <td><span class="symbol">98</span></td>
+                        <td><span class="symbol">62</span></td>
+                        <td><span class="symbol">142</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">c</span></td>
+                        <td><span class="symbol">99</span></td>
+                        <td><span class="symbol">63</span></td>
+                        <td><span class="symbol">143</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">d</span></td>
+                        <td><span class="symbol">100</span></td>
+                        <td><span class="symbol">64</span></td>
+                        <td><span class="symbol">144</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">e</span></td>
+                        <td><span class="symbol">101</span></td>
+                        <td><span class="symbol">65</span></td>
+                        <td><span class="symbol">145</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">f</span></td>
+                        <td><span class="symbol">102</span></td>
+                        <td><span class="symbol">66</span></td>
+                        <td><span class="symbol">146</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">g</span></td>
+                        <td><span class="symbol">103</span></td>
+                        <td><span class="symbol">67</span></td>
+                        <td><span class="symbol">147</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">h</span></td>
+                        <td><span class="symbol">104</span></td>
+                        <td><span class="symbol">68</span></td>
+                        <td><span class="symbol">150</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">i</span></td>
+                        <td><span class="symbol">105</span></td>
+                        <td><span class="symbol">69</span></td>
+                        <td><span class="symbol">151</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">j</span></td>
+                        <td><span class="symbol">106</span></td>
+                        <td><span class="symbol">6A</span></td>
+                        <td><span class="symbol">152</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">k</span></td>
+                        <td><span class="symbol">107</span></td>
+                        <td><span class="symbol">6B</span></td>
+                        <td><span class="symbol">153</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">l</span></td>
+                        <td><span class="symbol">108</span></td>
+                        <td><span class="symbol">6C</span></td>
+                        <td><span class="symbol">154</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">m</span></td>
+                        <td><span class="symbol">109</span></td>
+                        <td><span class="symbol">6D</span></td>
+                        <td><span class="symbol">155</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">n</span></td>
+                        <td><span class="symbol">110</span></td>
+                        <td><span class="symbol">6E</span></td>
+                        <td><span class="symbol">156</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">o</span></td>
+                        <td><span class="symbol">111</span></td>
+                        <td><span class="symbol">6F</span></td>
+                        <td><span class="symbol">157</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">p</span></td>
+                        <td><span class="symbol">112</span></td>
+                        <td><span class="symbol">70</span></td>
+                        <td><span class="symbol">160</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">q</span></td>
+                        <td><span class="symbol">113</span></td>
+                        <td><span class="symbol">71</span></td>
+                        <td><span class="symbol">161</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">r</span></td>
+                        <td><span class="symbol">114</span></td>
+                        <td><span class="symbol">72</span></td>
+                        <td><span class="symbol">162</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">s</span></td>
+                        <td><span class="symbol">115</span></td>
+                        <td><span class="symbol">73</span></td>
+                        <td><span class="symbol">163</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">t</span></td>
+                        <td><span class="symbol">116</span></td>
+                        <td><span class="symbol">74</span></td>
+                        <td><span class="symbol">164</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">u</span></td>
+                        <td><span class="symbol">117</span></td>
+                        <td><span class="symbol">75</span></td>
+                        <td><span class="symbol">165</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">v</span></td>
+                        <td><span class="symbol">118</span></td>
+                        <td><span class="symbol">76</span></td>
+                        <td><span class="symbol">166</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">w</span></td>
+                        <td><span class="symbol">119</span></td>
+                        <td><span class="symbol">77</span></td>
+                        <td><span class="symbol">167</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">x</span></td>
+                        <td><span class="symbol">120</span></td>
+                        <td><span class="symbol">78</span></td>
+                        <td><span class="symbol">170</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">y</span></td>
+                        <td><span class="symbol">121</span></td>
+                        <td><span class="symbol">79</span></td>
+                        <td><span class="symbol">171</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">z</span></td>
+                        <td><span class="symbol">122</span></td>
+                        <td><span class="symbol">7A</span></td>
+                        <td><span class="symbol">172</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">{</span></td>
+                        <td><span class="symbol">123</span></td>
+                        <td><span class="symbol">7B</span></td>
+                        <td><span class="symbol">173</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">|</span></td>
+                        <td><span class="symbol">124</span></td>
+                        <td><span class="symbol">7C</span></td>
+                        <td><span class="symbol">174</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">}</span></td>
+                        <td><span class="symbol">125</span></td>
+                        <td><span class="symbol">7D</span></td>
+                        <td><span class="symbol">175</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="symbol char">~</span></td>
+                        <td><span class="symbol">126</span></td>
+                        <td><span class="symbol">7E</span></td>
+                        <td><span class="symbol">176</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-fav" style="text-align:center;" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display:none;">
+            <h1>Favourites</h1>
+            <input type="text" name="fav" id="fav">
+            <br>
+            <input id="add" type="button" value="Add" />
+            <p><a href="#" id="clearFav">Clear Favourites</a></p>
+            <div id="favList"> </div>
+        </div>
+    </div>
+</body>
+
+</html>

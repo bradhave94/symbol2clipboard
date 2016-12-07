@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+* {
+    font-family: 'Noto Sans', sans-serif !important;
+}
+
+html, body {
+       overflow-y: scroll;
+}
+
+.symbol {
+    font-size: x-large;
+    position: relative;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 2em;
+    display: inline-block;
+}
+
+.symbol:hover {
+    background-color: #4285f4;
+    cursor: pointer;
+}
+
+
+#tab-ascii .symbol, #tab-values .symbol {
+    font-size: medium;
+}
+
+#tab-ascii th {
+    padding-left: 17px;
+}
+
+body {
+    margin: 0;
+    width: 400px;
+    max-width: 400px;
+}
+
+.ui-widget-header {
+    border: none !important;
+    border-bottom: 1px solid #efefef !important;
+    border-radius: 0 !important;
+    background: none !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #fff !important;
+    z-index: 1;
+    
+}
+
+.ui-tabs-panel {
+    margin-top: 30px;
+}
+
+.btn{
+    color: #fff !Important;
+    text-decoration: none;
+    background-color: #1d9d74;
+    border-color: #198764;
+    padding: 6px 12px;
+    width: 100px !Important;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.btn:hover{
+    background-color: #198764;
+    border-color: #198764;
+}
+
+li.ui-state-default.ui-corner-top {
+    background: #4285f4 !important;
+}
+
+.ui-state-active a{
+    background-color: #2E5DAA;
+}
+
+
+
+li.ui-state-default.ui-corner-top a {
+    color: #fff;
+}
+
+ul li:focus, ul li a:focus, input#add:focus {
+    outline: none !important;
+}
+
+.char {
+    color: red;
+}
+
+.ui-widget.ui-widget-content{
+    border: none;
+}
+
+input#fav {
+    font-size: large;
+    padding: 5px;
+    text-align: center;
+}
+
+input#add {
+    background: #4285f4;
+    padding: 8px 45px;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+input#add:hover {
+    background: #2E5DAA;
+    cursor: pointer;
+}
+
+div#favList {
+    margin-top: 30px;
+    border-top: 1px solid #EFEFEE;
+    padding: 15px;
+}
+
+a#clearFav {
+    text-decoration: none;
+}
