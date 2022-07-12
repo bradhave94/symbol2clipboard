@@ -15,11 +15,16 @@ Looking for symbols? Find them here. Donger
 
 # Change Log
 --------------
+## [4.0] - 2022-12-07
+### Removed unused permissions
+
+## [4.0] - 2017-04-20
+### Bug Fixes
+
 ## [3.0] - 2016-12-07
 ### Added
 - Added Favourites
 - More Donger
-
 
 ## [2.0] - 2016-12-06
 ### Added
